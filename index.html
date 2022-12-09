@@ -6,12 +6,61 @@
   <meta name="author" content="Mohammed Said Ali">
   <meta name="description" content="This is a front end mentor challenge to code a huddle landing page with curved styles.">
   <meta name="keywords" content="frontendmentor, html, css, sass">
+  <!-- font family  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@700&display=swap" rel="stylesheet">
+  <!--x font family  x-->
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="dist/style.css">
   <title>Frontend Mentor | Huddle landing page with curved sections</title>
 </head>
+
 <body>
-  <h1>Hello </h1>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum facilis molestiae dignissimos voluptatibus vel facere nihil eos enim perspiciatis dolor quis iusto ducimus ipsam, totam, eum nobis obcaecati accusantium eligendi temporibus. Cum corporis a autem ipsa repudiandae? Fuga, corrupti?</p>
+
+  <!-- header -->
+  <header class="header">
+    <div class="header__nav-brand">
+      <figure>
+        <img src="images/logo.svg" alt="logo image">
+        <figcaption>Huddle Logo</figcaption>
+      </figure>
+    </div>
+    <div class="btnContainer">
+      <button class="btnContainer__btn__pink btn">Try It Free</button>
+    </div>
+  </header>
+  <!--x header x-->
+  <main>
+    <!-- hero -->
+     <section class="hero">
+      <div class="hero__description">
+        <h1>Build The Community Your Fans Will Love</h1>
+        <p>  Huddle re-imagines the way we build communities. You have a voice, but so does your audience. Create connections with your users as you engage in genuine discussion. </p>
+        <button class="hero__btn">Get Started For Free</button>
+      </div>
+      <div class="hero__image">
+        <figure>
+          <img src="images/screen-mockups.svg" alt="hero image">
+        </figure>
+        <div class="hero__community-formed">
+          <span>
+            <i class="fa-regular fa-people-group"></i>
+          </span>
+          <strong>1.4k+</strong>
+          <p>Communities Formed</p>
+        </div>
+        <div class="hero__message-sent">
+          <span>
+            <i class="fa-light fa-message-dots"></i>
+          </span>
+          <strong>2.7m+</strong>
+          <p>Messages Sent</p>
+        </div>
+      </div>
+     </section>
+    <!--x hero x-->
+  </main>
+  <!-- footer -->
+  <footer></footer>
+  <!--x footer x-->
 </body>
 </html>

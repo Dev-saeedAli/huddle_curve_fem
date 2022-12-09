@@ -1,0 +1,35 @@
+@use '../functions' as u;
+@use '../globals/colors' as color;
+
+.header {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-items: center;
+    padding: u.rem(10);
+
+    @include u.breakpoints (medium) {
+        padding: u.rem(10) u.rem(50);
+    }
+
+    &__nav-brand{
+        justify-self: start;
+        img {
+            width: u.rem(160);
+        }
+    }
+} 
+
+.btnContainer {
+   justify-self: end;
+
+    &__btn__pink{
+        background: transparent;
+        width: u.rem(100);
+        height: u.rem(40);
+        border-radius: 30%;
+        border :1px solid color.$Pink;
+        color: color.$Pink;
+        font-size: u.rem(16);
+    }
+}

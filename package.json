@@ -1,0 +1,22 @@
+{
+  "name": "huddle-landing-page",
+  "version": "1.0.0",
+  "description": "Huddle landing page made with html, css javascript sass",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dev-saeedAli/huddle_curve_fem.git"
+  },
+  "author": "Saeed Ali",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Dev-saeedAli/huddle_curve_fem/issues"
+  },
+  "homepage": "https://github.com/Dev-saeedAli/huddle_curve_fem#readme",
+  "devDependencies": {
+    "font-awesome": "^4.7.0"
+  }
+}
