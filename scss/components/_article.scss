@@ -1,0 +1,86 @@
+@use '../globals' as g;
+@use '../functions' as f;
+
+main {
+    .article {
+        max-width: f.rem(1500);
+        display: grid;
+        grid-template-columns: 1fr;
+        text-align: center;
+        margin: 0 auto;
+        @include f.breakpoints(large) {
+            margin: -40px 0 0; // overflow in the section is fixed by line
+            background-color: #e6faff;
+            grid-template-columns: 1fr 1fr;
+
+        }
+
+        &__left {
+            background-color: #e6faff;
+            z-index: 100;
+            margin-top: -40px;
+            @include f.breakpoints(large){
+                grid-column: 3 / -1;
+                grid-row:1/-1 ;
+                margin-bottom: 0px;
+                margin-top: -40px;
+            }
+            img {
+                width: calc(100vw - 10vw);
+                object-fit: cover;
+
+                @include f.breakpoints(large) {
+                    width: calc(100vw - 50vw);
+                    max-width: calc(100vw - 50vw);
+                }
+                
+            }
+        }
+        &__right {
+            background-color: #e6faff;
+            margin-bottom: 0px;
+            z-index: 100;
+            margin-bottom: -40px;
+            @include f.breakpoints(large){
+                grid-column: 1 / span 2;
+                align-self: center;
+                margin-bottom: 0px;
+                grid-row:1 / -1 ;
+                max-width: f.rem(500);
+                margin: 0 auto;
+            }
+
+
+            h3 {
+                margin: f.rem(30) 0 0;
+                font-size: f.rem(30);
+                padding: 0 f.rem(10);
+                @include f.breakpoints(large){
+                    padding: 0 ;
+                    text-align: left;
+                    margin: 0 0;
+                    font-size: f.rem(30);
+                }
+            }
+
+            p {
+                margin: f.rem(20) auto;
+                max-width: calc(100vw - 10vw);
+                font-family:g.$font-Sans;
+                font-weight: 550;
+                line-height: 1.7;
+
+                @include f.breakpoints(medium) {
+                    width: calc(100vw - 30vw);
+                }
+                @include f.breakpoints(large) {
+                    width: unset;
+                    // max-width: f.rem(400);
+                    padding: 0 f.rem(20) 0 0;
+                    text-align: left;
+                    font-size: f.rem(20);
+                }
+            }
+        }
+    }
+}

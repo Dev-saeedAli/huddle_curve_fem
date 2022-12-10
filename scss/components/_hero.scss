@@ -1,0 +1,95 @@
+@use '../functions' as u; //function
+@use '../globals' as f; 
+
+main .hero {
+    display:grid;
+    // max-width: calc(100vw - 10vw);
+    grid-template-columns: 1fr;
+    place-items:center;
+    padding: u.rem(0) u.rem(10);
+    margin-top: u.rem(40);
+    text-align: center;
+    margin-inline: auto ;
+
+
+    &__description {
+        word-wrap: break-word;
+        margin: u.rem(40) 0 u.rem(30) u.rem(10);
+
+        @include u.breakpoints(medium){
+            max-width: calc(100vw - 20vw);
+            margin-inline: auto;
+        }
+        @include u.breakpoints(large){
+            max-width: calc(100vw - 40vw);
+            margin-inline: auto;
+        }
+
+        h1 {
+            padding: 0 u.rem(10);
+            font-size: u.rem(24);
+            line-height: 1.6;
+        }
+        p {
+            font-family: f.$font-Sans;
+            font-size: u.rem(17);
+            font-weight: 500;
+            margin: u.rem(20) 0;
+            line-height: 1.6;
+            padding: 0 u.rem(10);
+        }
+
+        &__btn {
+            border: none;
+            color: f.$Very-Pale-Blue;
+            padding: u.rem(10) u.rem(20);
+            text-align: center;
+            text-decoration: none;
+            font-size: u.rem(17);
+            margin: 4px 2px;
+            background: f.$Pink;
+            border-radius: u.rem(50);
+        }
+    }
+
+    &__image {
+        place-self: center;
+        img {
+            object-fit: cover;
+            max-width: calc(100vw - 10vw);
+
+        }
+    }
+
+    &__followers {
+        text-align: left;
+        margin: u.rem(50) auto;
+        @include u.flexCenter(column);
+        gap: u.rem(40);
+
+        @include u.breakpoints(medium){
+            @include u.flexCenter(row);
+            justify-content: space-evenly;
+        }
+
+
+        &__community-formed,
+        &__message-sent {
+            
+            img {
+                object-fit: cover;
+                display: block;
+                max-width: u.rem(40);
+            }
+            strong {
+                display: block;
+                font-size: u.rem(55);
+            }
+            p {
+                font-size: u.rem(17);
+                font-family: f.$font-Sans;
+                color: lighten(f.$Very-Dark-Cyan, 15%);
+            }
+        }
+    }
+}

@@ -5,15 +5,17 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
-    justify-items: center;
     padding: u.rem(10);
+    max-width: u.rem(1200);
+    margin: 0 auto;
 
     @include u.breakpoints (medium) {
         padding: u.rem(10) u.rem(50);
     }
-
     &__nav-brand{
         justify-self: start;
+
+    
         img {
             width: u.rem(160);
         }
@@ -25,9 +27,8 @@
 
     &__btn__pink{
         background: transparent;
-        width: u.rem(100);
-        height: u.rem(40);
-        border-radius: 30%;
+        padding: u.rem(10) u.rem(20);
+        border-radius: u.rem(50);
         border :1px solid color.$Pink;
         color: color.$Pink;
         font-size: u.rem(16);
