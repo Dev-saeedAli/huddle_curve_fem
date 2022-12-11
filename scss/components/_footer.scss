@@ -1,0 +1,171 @@
+@use '../globals' as g;
+@use '../functions' as f;
+@use 'hero' as *;
+
+.footer {
+    max-height: fit-content;
+    background: g.$Very-Dark-Cyan;
+    color: g.$Very-Pale-Blue;
+    position: relative;
+    padding: f.rem(20) 0;
+    display: grid;
+    gap: f.rem(30);
+    max-width: f.rem(1450);
+    margin-inline:auto;
+
+    @include f.breakpoints(medium) {
+        grid-template-columns: repeat(12, 1fr);
+        margin-top: f.rem(100);
+        place-content: center;
+        padding-inline: f.rem(20) ;
+    }
+
+    @include f.breakpoints(xlarge) {
+        margin-top: f.rem(300);
+    }
+
+    .waves {
+        position: absolute;
+        top: f.rem(-70);
+        @include f.breakpoints(medium) {
+            top: f.rem(-170);
+        }
+    
+        @include f.breakpoints(large) {
+            top: f.rem(-218);
+        }
+        @include f.breakpoints(xlarge) {
+            top: f.rem(-314);
+        }
+    
+    }
+
+    &__left {
+        padding: 0 f.rem(10);
+
+        
+    @include f.breakpoints(medium) {
+       grid-column: 7 / -1;
+       grid-row: 1 / -1;
+    }
+    
+    strong {
+        font-size: f.rem(17);
+    }
+    p {
+        font-family: g.$font-Sans;
+        line-height: 1.7;
+        font-size: f.rem(16);
+        margin: f.rem(12) 0;
+        @include f.breakpoints(medium) {
+            max-width: f.rem(350);
+        }
+    }
+    
+    form {
+        @include f.breakpoints(medium) {
+            display: flex;
+           gap: f.rem(30);
+         }
+        
+        input {
+            display: block;
+            width: 100%;
+            padding: f.rem(10);
+            border-radius: f.rem(12);
+            &:focus {
+                outline: none;
+                border: none;
+                box-shadow: none;
+            }
+        }
+        .invalid-feedback {
+            font-family: g.$font-Sans;
+            // color: rgba(g.$Light-Red, 85%);
+            font-size: f.rem(15);
+            margin: f.rem(4) 0;
+            
+        }
+            .footer__btn {
+                display: flex;
+                justify-content: end;
+                @include f.breakpoints(medium) {
+                    align-items: start;
+                }
+                &--btn {
+                    border: none;
+                    color: g.$Very-Pale-Blue;
+                    padding: f.rem(10) f.rem(20);
+                    text-align: center;
+                    text-decoration: none;
+                    font-size: f.rem(17);
+                    margin: f.rem(10) f.rem(2) f.rem(4);
+                    background: g.$Pink;
+                    border-radius: f.rem(8);
+                    box-shadow: 5px 4px 10px rgba(0,0,0,0.3);
+                    cursor: pointer;
+                    @include f.breakpoints(medium) {
+                        margin: f.rem(4) f.rem(2);
+                    }
+                    transition: opacity .3s ease;
+                    &:hover {
+                        opacity: 0.8;
+                    }
+                    
+                }
+            }
+            
+        }
+    }
+    
+    &__right {
+        padding: 0 f.rem(10) ;
+        @include f.breakpoints(medium) {
+            grid-column: 1 / 7;
+            grid-row: 1 / -1;
+        }
+        .contact {
+            @include f.flexCenter(row);
+            justify-content: flex-start;
+            margin: f.rem(20) 0;  
+            
+            svg {
+                width: f.rem(15);
+            }
+
+            small {
+                margin-left: f.rem(20);
+            }
+        }
+        
+        figure {
+            img {
+                filter: invert(100%) hue-rotate(180deg);
+                max-width:f.rem(150) ;
+            }
+
+            p {
+                font-size: f.rem(14);
+                font-family: g.$font-Sans;
+                line-height: 1.7;
+                font-weight: 550;
+                margin: f.rem(10) 0;
+              
+            }
+        }
+        &--icons {
+            margin: f.rem(15) 0;
+            display: flex;
+            gap: f.rem(20);
+            width: f.rem(120);
+            cursor: pointer;
+            svg {
+                fill: white;
+                transition: all .3s ease;
+                &:hover {
+                    fill: cyan;
+                }
+            }
+        }
+    }
+} 

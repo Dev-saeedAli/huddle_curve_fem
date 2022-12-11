@@ -3,13 +3,14 @@
 
 main .hero {
     display:grid;
-    // max-width: calc(100vw - 10vw);
     grid-template-columns: 1fr;
     place-items:center;
     padding: u.rem(0) u.rem(10);
     margin-top: u.rem(40);
     text-align: center;
     margin-inline: auto ;
+    margin-top: u.rem(40) ;
+    margin-bottom: u.rem(80);
 
 
     &__description {
@@ -49,6 +50,12 @@ main .hero {
             margin: 4px 2px;
             background: f.$Pink;
             border-radius: u.rem(50);
+            box-shadow: 5px 4px 10px rgba(0,0,0,0.3);
+            cursor: pointer;
+            transition: opacity .3s ease;
+            &:hover {
+                opacity: 0.8;
+            }
         }
     }
 

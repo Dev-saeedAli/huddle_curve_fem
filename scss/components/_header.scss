@@ -5,7 +5,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
-    padding: u.rem(10);
+    padding: u.rem(20) u.rem(10);
     max-width: u.rem(1200);
     margin: 0 auto;
 
@@ -32,5 +32,10 @@
         border :1px solid color.$Pink;
         color: color.$Pink;
         font-size: u.rem(16);
+        cursor: pointer;
+        transition: all .3s ease;
+        &:hover {
+            background: color.$Very-Pale-Blue;
+        }
     }
 }

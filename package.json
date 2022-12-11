@@ -16,5 +16,8 @@
     "url": "https://github.com/Dev-saeedAli/huddle_curve_fem/issues"
   },
   "homepage": "https://github.com/Dev-saeedAli/huddle_curve_fem#readme",
-  "keywords": []
+  "keywords": [],
+  "devDependencies": {
+    "font-awesome": "^4.7.0"
+  }
 }

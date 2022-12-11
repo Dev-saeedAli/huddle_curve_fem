@@ -1,0 +1,28 @@
+@use '../functions' as f;
+@use 'hero' as *;
+
+main {
+    .newsletter {
+        padding: f.rem(15) 0;
+        text-align: center;
+        margin-bottom: f.rem(110);
+        h3 {
+            font-size: f.rem(22);
+            line-height: 1.7;
+            max-width: f.rem(300);
+            margin: 0 auto;
+            @include f.breakpoints(large){
+                max-width: 100%;
+                margin : 0 0;
+            }
+        }
+        &__btn {
+            @extend .hero__description__btn;
+            
+            margin-top: f.rem(10);
+            @include f.breakpoints(large){
+               margin-top: f.rem(20) ;
+            }
+        }
+    }
+}

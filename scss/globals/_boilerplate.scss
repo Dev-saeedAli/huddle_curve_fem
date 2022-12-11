@@ -1,5 +1,6 @@
 @use 'fonts' as font;
 @use '../functions' as f;
+@use 'colors' as c;
 
 *,
 *::before,
@@ -20,4 +21,12 @@ html, body {
 .offset {
     position: absolute;
     left: -1000000px;
+}
+
+.error {
+    color : rgba(c.$Light-Red, 85%);
+}
+
+.none {
+    display: none;
 }
