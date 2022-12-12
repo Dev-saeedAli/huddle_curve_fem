@@ -67,7 +67,7 @@
     form {
         @include f.breakpoints(medium) {
             display: flex;
-           gap: f.rem(30);
+            align-items: center;
          }
         
         input {
@@ -93,6 +93,7 @@
                 justify-content: end;
                 @include f.breakpoints(medium) {
                     align-items: start;
+                    margin-left: f.rem(10);
                 }
                 &--btn {
                     border: none;

@@ -61,7 +61,7 @@
 <div class="article__parent">
       <!-- Article One -->
       <article>
-        <h2 class="offset" aria-label="Article heading One">Grow Together</h2>
+        <h2 class="offset">Grow Together</h2>
         <section class="article">
           <svg class="wavy" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#e6faff" fill-opacity="1" d="M0,0L60,21.3C120,43,240,85,360,138.7C480,192,600,256,720,250.7C840,245,960,171,1080,117.3C1200,64,1320,32,1380,16L1440,0L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
           <div class="article__left">
@@ -78,7 +78,7 @@
   
           <!-- Article Two -->
           <article>
-            <h2 class="offset" aria-label="Article heading One">Grow Together</h2>
+            <h2 class="offset">Grow Together</h2>
             <section class="article article__even">
               <div class="article__left article__even__left">
                 <img src="images/illustration-flowing-conversation.svg" alt="article image">
@@ -95,7 +95,7 @@
           
           <!-- Article Three -->
           <article>
-            <h2 class="offset" aria-label="Article heading One">Grow Together</h2>
+            <h2 class="offset">Grow Together</h2>
             <section class="article">
               <svg class="wavy" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#e6faff" fill-opacity="1" d="M0,0L60,21.3C120,43,240,85,360,138.7C480,192,600,256,720,250.7C840,245,960,171,1080,117.3C1200,64,1320,32,1380,16L1440,0L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
               <div class="article__left">
@@ -127,10 +127,11 @@
       <strong>NEWSLETTER</strong>
       <P>To recieve tips on how to grow your community, sign up to our weekly newsletter. We’ll never send you spam or pass on your email address.</P>
       <form novalidate id="form">
-        <label for="email">
-          <input type="email" id="input">
-          <div class="invalid-feedback none">Check your email address</div>
-        </label>
+        <label for="input"></label>
+          <div class="form__group">
+            <input type="email" id="input">
+            <div class="invalid-feedback none">Check your email address</div>
+          </div>
         <div class="footer__btn"><button class="footer__btn--btn">Subscribe</button></div>
       </form>
     </div>
