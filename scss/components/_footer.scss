@@ -27,6 +27,7 @@
     .waves {
         position: absolute;
         top: f.rem(-70);
+        z-index: 99;
         @include f.breakpoints(medium) {
             top: f.rem(-170);
         }
@@ -42,6 +43,7 @@
 
     &__left {
         padding: 0 f.rem(10);
+        z-index: 100;
 
         
     @include f.breakpoints(medium) {
@@ -119,7 +121,8 @@
     }
     
     &__right {
-        padding: 0 f.rem(10) ;
+        padding: 0 f.rem(10);
+        z-index: 100;
         @include f.breakpoints(medium) {
             grid-column: 1 / 7;
             grid-row: 1 / -1;
